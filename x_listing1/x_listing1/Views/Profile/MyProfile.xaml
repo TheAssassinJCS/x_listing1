@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.MyProfile"
+             Title="myProfile"
+             BackgroundColor="#635985"
+             NavigationPage.HasNavigationBar="False">
+
+
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".45*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0"
+                             BackgroundColor="#393053">
+                <Image Source="profimg" 
+                       WidthRequest="100" 
+                       VerticalOptions="CenterAndExpand" 
+                       HorizontalOptions="Center"
+                       x:Name="profileImg"/>
+                <Label Text="MR Steven" 
+                       TextColor="GhostWhite"
+                       FontSize="Small"
+                       FontAttributes="Italic"
+                       Opacity=".50"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       x:Name="profileTitle"/>
+
+        </StackLayout>
+            
+            <StackLayout BackgroundColor="#635985" Grid.Row="1">
+            <Label Text="NAME:" TextColor="GhostWhite" FontSize="15" Opacity="0.60" Margin="10,0,0,0"/>
+            <Label Text="Steven Castillo" 
+                   TextColor="#393053" 
+                   FontSize="20" 
+                   Margin="15,0,10,0" 
+                   x:Name="profileName"/>
+
+            <Label Text="EMAIL:" TextColor="GhostWhite" FontSize="15" Opacity="0.60" Margin="10,0,0,0"/>
+            <Label Text="Steven.Castillo1@gmail.com" 
+                   TextColor="#393053" 
+                   FontSize="20" 
+                   Margin="15,0,10,0" 
+                   x:Name="profileEmail"/>
+
+            <Label Text="LOCATION:" TextColor="GhostWhite" FontSize="15" Opacity="0.60" Margin="10,0,0,0"/>
+            <Label Text="Bethlehem , Eureka, Lombaard street, nr:31" 
+                   TextColor="#393053" 
+                   FontSize="20" 
+                   Margin="15,0,10,0" 
+                   x:Name="profileLocation"/>
+
+            <Label Text="Bussiness:" TextColor="GhostWhite" FontSize="15" Opacity="0.60" Margin="10,0,0,0"/>
+            <Label Text="Bethlehem Hydro Rubber (BHR)" 
+                   TextColor="#393053" 
+                   FontSize="20" 
+                   Margin="15,0,10,0" 
+                   x:Name="profileBussiness"/>
+
+            <Label Text="Mobile Nr:" TextColor="GhostWhite" FontSize="15" Opacity="0.60" Margin="10,0,0,0"/>
+            <Label Text="012 345 6789" 
+                   TextColor="#393053" 
+                   FontSize="20" 
+                   Margin="15,0,10,0" 
+                   x:Name="profileCellNo"/>
+
+        </StackLayout>
+
+        </Grid>
+
+
+</ContentPage>

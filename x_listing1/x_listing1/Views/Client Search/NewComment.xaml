@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.NewComment"
+             xmlns:fRating="clr-namespace:Rating;assembly=Rating"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#394867">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" BackgroundColor="#212A3E">
+            <Image Source="profimg"
+               HeightRequest="100"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"
+               Margin="10,10,0,10"
+                   x:Name="newCommentImage"/>
+            <Label Text="Johan Breyton van Tonder"
+                   TextColor="WhiteSmoke"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center"
+                   x:Name="newCommentClientName"/>
+        </StackLayout>
+
+        <Editor Placeholder="Add Comment(200 words max)"
+               PlaceholderColor="FloralWhite"
+               TextColor="WhiteSmoke"
+               BackgroundColor="Transparent"
+               Margin="0,10,0,0"
+               Keyboard="Chat"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               FontSize="Medium"
+               AutoSize="TextChanges"
+               MaxLength="200"/>
+
+        <fRating:RatingBar x:Name="newCommentRatingBar" 
+                               HorizontalOptions="CenterAndExpand" 
+                               ImageWidth="20" 
+                               ImageHeight="20" 
+                               FlowDirection="LeftToRight" 
+                               EmptyStarImage="starEmpty" 
+                               FillStarImage="starFill" 
+                               SelectedStarValue="1"
+                                Margin="0,20,0,0"/>
+
+        <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+            <Button Text="Cancel"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#212A3E"
+                    CornerRadius="20"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+            <Button Text="Add Comment"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#212A3E"
+                    CornerRadius="20"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

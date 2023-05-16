@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.ClientSearch"
+             xmlns:ratingbarcontrol="clr-namespace:RatingBarControl;assembly=RatingBarControl" xmlns:x_listing1="clr-namespace:x_listing1" 
+             BackgroundColor="#394867"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+        <Grid Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".35*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Image Source="profimg" 
+                       HeightRequest="100" 
+                       WidthRequest="100" 
+                       Grid.Row="0" 
+                       Grid.Column="0"
+                       x:Name="clientSearchProfImg"/>
+            
+            <StackLayout Grid.Column="1"
+                             Grid.Row="0">
+                <Label Text="Steven Castillo" 
+                       TextColor="WhiteSmoke" 
+                       FontSize="Large"  
+                       Grid.Column="1"
+                       Grid.Row="0" 
+                       Margin="15,0,0,0"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Start"
+                       x:Name="clientSearchProfName"/>
+                
+                <Label Text="Steven.Castillo1@gmail.com" 
+                       TextColor="WhiteSmoke" 
+                       FontSize="Medium"  
+                       Grid.Column="1"
+                       Grid.Row="0" 
+                       Opacity="0.15"
+                       Margin="15,0,0,0"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Start"
+                       x:Name="clientSearchProfEmail"/>
+            </StackLayout>
+        </Grid>
+        
+        <StackLayout Orientation="Horizontal">
+            <SearchBar Placeholder="Search Client" 
+                   PlaceholderColor="White"
+                   CancelButtonColor="white"
+                   BackgroundColor="#212A3E"
+                   TextColor="White"
+                   FontSize="Medium" 
+                   VerticalOptions="StartAndExpand"
+                   x:Name="clientSearchBar"
+                   TextChanged="clientSearchBar_TextChanged"/>
+            
+            <Button Text="+ADD" 
+                    BackgroundColor="#9BA4B5" 
+                    TextColor="White" 
+                    CornerRadius="100"
+                    x:Name="btnClientSearchAddClient"
+                    Clicked="btnClientSearchAddClient_Clicked"
+                    />
+        </StackLayout>
+
+        <ListView x:Name="clientSearchListView" ItemTapped="ClientSearchListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".90*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Grid.Column="0" Margin="5,0,0,0">
+                                <Label Text="{Binding clientName}"
+                                       TextColor="White"/>
+                                <Label Text="{Binding topComment}"
+                                       TextColor="WhiteSmoke"/>
+                            </StackLayout>
+
+                            <ratingbarcontrol:RatingBar Grid.Column="1"
+                                    StarHeightRequest="15" 
+                                    StarWidthRequest="15"  
+                                    EmptyStarImage="starEmpty" 
+                                    FillStarImage="starFill" 
+                                    x:Name="rtControl"
+                                    HorizontalOptions="End"
+                                    SelectedStarValue="{Binding clientAdjustedRating}"
+                                    InputTransparent="True"
+                                    IsEnabled="False"
+                                    Margin="0,0,10,0"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
+    
+    
+    
+</ContentPage>

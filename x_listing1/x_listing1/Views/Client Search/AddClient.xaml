@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.AddClient"
+             BackgroundColor="#0B2447"
+             xmlns:fRating="clr-namespace:Rating;assembly=Rating"
+             Title="ADD CLIENT">
+
+    <ScrollView VerticalOptions="FillAndExpand">
+        <StackLayout Margin="0,20,0,0">
+            <Label Text="NAME:" 
+               TextColor="White" 
+               FontSize="Large" 
+               HorizontalOptions="Start"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry TextColor="White" 
+                    PlaceholderColor="White" 
+                    Placeholder="Client Name" 
+                    Margin="20,0,0,0" 
+                    Opacity=".8"
+                    BackgroundColor="#19376D"
+                    HorizontalOptions="FillAndExpand"
+                    x:Name="addClientName"
+                />
+                <Entry TextColor="White" 
+                    PlaceholderColor="White" 
+                    Placeholder="Client Surname" 
+                    Margin="20,0,0,0" 
+                    Opacity=".8"
+                    BackgroundColor="#19376D"
+                    HorizontalOptions="FillAndExpand"
+                    x:Name="addClientSurname"
+               />
+            </StackLayout>
+
+            <Label Text="CELL No:" 
+               TextColor="White" 
+               FontSize="Large" 
+               HorizontalOptions="Start"/>
+            <Entry TextColor="White" 
+               Placeholder="Cell Number" 
+               PlaceholderColor="White"
+               Keyboard="Numeric"
+               Margin="20,0,0,0" 
+               Opacity=".8"
+               BackgroundColor="#19376D"
+                   x:Name="addClientCell"
+               />
+
+            <Label Text="EMAIL:" 
+               TextColor="White" 
+               FontSize="Large" 
+               HorizontalOptions="Start"/>
+            <Entry TextColor="White" 
+               Placeholder="Email adress" 
+               PlaceholderColor="White"
+               Keyboard="Email"
+               Margin="20,0,0,0" 
+               Opacity=".8"
+               BackgroundColor="#19376D"
+                   x:Name="addClientEmail"
+               />
+            
+            <Label Text="CITY:" 
+               TextColor="White" 
+               FontSize="Large" 
+               HorizontalOptions="Start"/>
+            <Entry TextColor="White" 
+               Placeholder="City" 
+               PlaceholderColor="White"
+               Margin="20,0,0,0" 
+               Opacity=".8"
+               BackgroundColor="#19376D"
+                   x:Name="addClientCity"
+               />
+
+            <Label Text="ADRESS:" 
+               TextColor="White" 
+               FontSize="Large" 
+               HorizontalOptions="Start"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry TextColor="White" 
+               Placeholder="Suburb" 
+               PlaceholderColor="White"
+               Margin="20,0,0,0" 
+               Opacity=".8"
+               BackgroundColor="#19376D"
+                   HorizontalOptions="FillAndExpand"
+                       x:Name="addClientSuburb"
+               />
+                <Entry TextColor="White"
+               Placeholder="Street Address" 
+               PlaceholderColor="White"
+               Margin="20,0,20,0" 
+               Opacity=".8"
+               BackgroundColor="#19376D"
+               HorizontalOptions="FillAndExpand"
+                    x:Name="addClientStreet"
+                />
+            </StackLayout>
+
+            <Label Text="COMMENT:" 
+               TextColor="White" 
+               FontSize="Large" 
+               HorizontalOptions="Start"/>
+            <Editor TextColor="White" 
+               Placeholder="Why This Client?" 
+               PlaceholderColor="White"
+               Margin="20,0,0,0" 
+               Opacity=".8"
+               BackgroundColor="#19376D"
+                AutoSize="TextChanges"
+               MaxLength="200"
+                    x:Name="addClientComment"
+                />
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="STAR RATING:" 
+               TextColor="White" 
+               FontSize="Large" 
+               HorizontalOptions="Start"
+                   Margin="0,0,20,0"/>
+                <fRating:RatingBar x:Name="addClientRating" 
+                               HorizontalOptions="EndAndExpand" 
+                               ImageWidth="15" 
+                               ImageHeight="15" 
+                               FlowDirection="LeftToRight" 
+                               EmptyStarImage="starEmpty" 
+                               FillStarImage="starFill" 
+                               SelectedStarValue="1"
+                               />
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,80">
+                <Button Text="CANCEL" 
+                        TextColor="White"
+                        CornerRadius="50"
+                        Margin="20,0,20,0"
+                        BackgroundColor="#19376A"
+                        x:Name="addClientCancelBtn"
+                        Clicked="AddClientCancelBtn_ClickedAsync"/>
+                <Button Text="CREATE" 
+                        TextColor="White"
+                        CornerRadius="50"
+                        Margin="20,0,20,0"
+                        BackgroundColor="#19376A"
+                        x:Name="addClientCreateBtn"
+                        Clicked="addClientCreateBtn_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.MainPage"
+            xmlns:local="clr-namespace:x_listing1"
+            NavigationPage.HasNavigationBar="False"
+            BarBackgroundColor="#0B2447"
+            SelectedTabColor="#394867"
+            UnselectedTabColor="#F1F6F9"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom">
+
+    <local:ClientSearch Title="Search" IconImageSource="starFillV" x:Name="Searche"/>
+    <local:MyProfile Title="Profile" IconImageSource="starFillV"/>
+    <local:Settings Title="Settings" IconImageSource="starEmptyV"/>
+
+</TabbedPage>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.Login"
+             NavigationPage.HasNavigationBar="false">
+
+    <StackLayout BackgroundColor="#9BA4B5">
+        <StackLayout BackgroundColor="#394867"
+                     Margin="0,0,0,20">
+            <Label Padding="20,30,0,30" 
+                   HorizontalOptions="Start" 
+                   Text="LOG IN"
+                   TextColor="WhiteSmoke"
+                   FontSize="50"
+                   FontAttributes="Bold"
+                   FontFamily="Sans Serif"/>
+        </StackLayout>
+
+        <Entry Placeholder="Email"
+               Keyboard="Email"
+               Margin="0,0,0,5"
+               x:Name="loginEmail"/>
+
+        <Entry Placeholder="Password" 
+               IsPassword="True" 
+               Margin="0,5,0,5"
+               x:Name="loginPassword"/>
+
+        <Picker Title="Bussiness Selection"
+                TitleColor="#F1F6F9"
+                Margin="0,5,0,30"
+                x:Name="bussinessPicker">
+            <Picker.Items>
+                <x:String>BHR</x:String>
+                <x:String>BHR</x:String>
+                <x:String>BHR</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Get Started" 
+                FontSize="Medium" 
+                TextColor="GhostWhite"
+                Opacity="20"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                HeightRequest="80"
+                Margin="0,30,0,0"
+                Padding="100,0,100,0"
+                BackgroundColor="Black"
+                CornerRadius="50"
+                x:Name="loginGetStartedBtn"
+                Clicked="loginGetStartedBtn_Clicked"/>
+
+        <Label Text="Forgot Password?"
+               FontSize="Small"
+               TextColor="AntiqueWhite"
+               VerticalOptions="EndAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               x:Name="forgotPassLbl"/>
+    </StackLayout>
+
+</ContentPage>
