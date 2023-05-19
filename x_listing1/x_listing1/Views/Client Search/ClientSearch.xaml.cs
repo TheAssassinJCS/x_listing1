@@ -18,6 +18,7 @@ namespace x_listing1
         //All the variables used in the client search page
         App appInit;
         CloudClientList c;
+        CloudClientComments cComs;
         ObservableCollection<ClientModal> cModals;
 
         //The Initialization of the client search page is done here, Most probably from the initialization of the MainPage
@@ -27,10 +28,11 @@ namespace x_listing1
         }
 
         //This sets the cloud client List and app class links . it is done from the mainPage.cs
-        public void SetCloudcList(CloudClientList cl, App a)
+        public void SetCloudcList(CloudClientList cl, App a, CloudClientComments comm)
         {
             c = cl;
             appInit = a;
+            cComs = comm;
             SetClientSearchListViewItemsSources();
         }
 
@@ -74,16 +76,23 @@ namespace x_listing1
         private void btnClientSearchAddClient_Clicked(object sender, EventArgs e)
         {
             //Sends to the add client Page
-            Navigation.PushAsync(appInit.GetAddClientPage());
+            Navigation.PushAsync(new AddClient(cComs, c, this));
         }
 
         //This Fires when one of the clients has been tapped . It opens the Client Info page for a spesific client and then adds all of the 
         //Details for that spesific client to the page.
-        private async void ClientSearchListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void ClientSearchListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             //If an item is selected in the client list then send to the clients info page
-            var client = e.Item as ClientModal;
-            await Navigation.PushAsync(new ClientInfo(client.clientName, client.clientEmail, client.clientAdjustedRating, client.clientCellNo, client.clientAddress, client.comments));
+            ClientModal client = e.Item as ClientModal;
+            if (client != null)
+            {
+                Navigation.PushAsync(new ClientInfo(client, cComs));
+            }
+            else
+            {
+                _ = DisplayAlert("Reference not set", "Client object does not have a reference", "OK");
+            }
         }
 
     }

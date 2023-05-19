@@ -15,6 +15,7 @@ namespace x_listing1
         //The variables that are used in the Main Page
         App appInit;
         CloudClientList cl;
+        CloudClientComments cComs;
 
         //The Initialization of the Main Page, done from the app.cs class
         public MainPage()
@@ -23,10 +24,11 @@ namespace x_listing1
         }
 
         //The links created from the cloud client list and the app.cs classes , done when the app starts.
-        public void SetCloudClients(CloudClientList _cl, App a) 
+        public void SetCloudClients(CloudClientList _cl, App a, CloudClientComments cm) 
         {
             cl = _cl;
             appInit = a;
+            cComs = cm;
             SetCloudClientsForSearch();
         }
 
@@ -34,7 +36,7 @@ namespace x_listing1
         public void SetCloudClientsForSearch()
         {
             //Searche is the Binding Context from the Xaml file, because the client search page has been given a name, Searche.
-            Searche.SetCloudcList(cl, appInit);
+            Searche.SetCloudcList(cl, appInit, cComs);
         }
         
     }

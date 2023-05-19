@@ -12,7 +12,7 @@ namespace x_listing1
         //Variables that has the links to all the pages that is used in the application
         Login lg;
         CloudClientList cloudclist;
-        AddClient addcl;
+        CloudClientComments cloudcComms;
         
         //The Initializing of the app class and the app starts here
         public App()
@@ -30,18 +30,17 @@ namespace x_listing1
         {
             //Creates the pages on the start of the application
             cloudclist = new CloudClientList();
-            addcl = new AddClient();
+            cloudcComms = new CloudClientComments();
 
             //Links the app class to the pages that was created.
-            addcl.SetAppInit(this);
-            addcl.SetCloudClientList(cloudclist);
-            cloudclist.GetComments();
+            cloudclist.GetComments(cloudcComms);
         }
 
         //Get the cloud client list from the app.cs class
         public CloudClientList GetCloudClientList() { return cloudclist; }
-        //Get the AddClient Page from the App.cs Class
-        public AddClient GetAddClientPage() { return addcl; }
+
+        //Gets the cloud client comments list
+        public CloudClientComments GetCloudComsList() { return cloudcComms; }
 
         //Sets the link between the login page and the app.cs class
         public void SetLoginAppLink()

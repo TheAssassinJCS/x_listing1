@@ -28,8 +28,10 @@ namespace x_listing1.CloudClients
                 commenterUsrRating=4, commenterUsrComment="Damn What the hell."}
         };
 
+
         public ObservableCollection<CommentModal> GetCommentList(string cName)
         {
+            if (cName == "") { return null; } ;
             ObservableCollection<CommentModal> tempCommentModal = new ObservableCollection<CommentModal>();
             for (int i = 0; i < comments.Count; i++)
             {
@@ -48,5 +50,12 @@ namespace x_listing1.CloudClients
                 return null;
             }
         }
+
+        public void PushNewComment(CommentModal com)
+        {
+            if(com == null) { return; }
+            comments.Add(com);
+        }
+
     }
 }

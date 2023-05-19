@@ -11,7 +11,6 @@ namespace x_listing1.CloudClients
 {
     public class CloudClientList
     {
-        CloudClientComments coms = new CloudClientComments();
         ObservableCollection<ClientModal> clients = new ObservableCollection<ClientModal>
             {
                 new ClientModal
@@ -48,7 +47,7 @@ namespace x_listing1.CloudClients
                 }
             };
 
-        public void GetComments()
+        public void GetComments(CloudClientComments coms)
         {
             foreach (ClientModal _clientModal in clients)
             {

@@ -53,7 +53,11 @@ namespace x_listing1
                 loginEmail.Text = "";
                 loginPassword.Text = "";
                 var mainPg = new MainPage();
-                mainPg.SetCloudClients(appinit.GetCloudClientList(), appinit);
+                if(appinit.GetCloudComsList() == null)
+                {
+                    DisplayAlert("Cloud Clients", "It's a null", "OK");
+                }
+                mainPg.SetCloudClients(appinit.GetCloudClientList(), appinit, appinit.GetCloudComsList());
                 Navigation.PushAsync(mainPg);
             }
 

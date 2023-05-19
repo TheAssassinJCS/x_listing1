@@ -34,7 +34,8 @@
                VerticalOptions="Start"
                FontSize="Medium"
                AutoSize="TextChanges"
-               MaxLength="200"/>
+               MaxLength="200"
+                x:Name="addCommentsComment"/>
 
         <fRating:RatingBar x:Name="newCommentRatingBar" 
                                HorizontalOptions="CenterAndExpand" 
@@ -58,7 +59,9 @@
                     BackgroundColor="#212A3E"
                     CornerRadius="20"
                     HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="CenterAndExpand"/>
+                    VerticalOptions="CenterAndExpand"
+                    x:Name="addCommentCreateBtn"
+                    Clicked="AddCommentCreateBtn_Clicked"/>
         </StackLayout>
     </StackLayout>
     
