@@ -9,6 +9,7 @@ using x_listing1.Modals;
 using x_listing1.CloudClients;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Xml.Serialization;
 
 namespace x_listing1
 {
@@ -20,6 +21,7 @@ namespace x_listing1
         CloudClientList c;
         CloudClientComments cComs;
         ObservableCollection<ClientModal> cModals;
+        UserModal usrM;
 
         //The Initialization of the client search page is done here, Most probably from the initialization of the MainPage
         public ClientSearch()
@@ -34,6 +36,14 @@ namespace x_listing1
             appInit = a;
             cComs = comm;
             SetClientSearchListViewItemsSources();
+        }
+
+        public void SetUserDetails(UserModal u)
+        {
+            usrM = u;
+            clientSearchProfName.Text = u.userName + " " + u.userSurname;
+            clientSearchProfImg.Source = u.userImage;
+            clientSearchProfEmail.Text = u.userEmail;
         }
 
         // This uses the Observable List variable that was created and links the cloud list to it. so that it is more accessable to the 

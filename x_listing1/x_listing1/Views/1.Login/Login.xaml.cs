@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using x_listing1;
+using x_listing1.CloudClients;
+using x_listing1.Modals;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +17,7 @@ namespace x_listing1
     {
         //The Variables used in the login Page
         App appinit;
+        CloudUsers cU;
         private string _password;
         private string _email;
         private string _bussiness;
@@ -30,12 +33,13 @@ namespace x_listing1
             _mainPass = "c1a";
         }
 
-        //To login to the app in the first place use these codes = email = c1 and the password = c1a
+        //To login to the app in the first place use these codes = email = c1 and the password = c1a and choose bhr as well
 
         //Links the app.cs class to the login page, Gets called when the application starts up
         public void SetAppLink(App a)
         {
             appinit = a;
+            cU = a.GetCloudUsersLink();
         }
 
         //When the login GET STARTED buttton is clicked
@@ -46,20 +50,42 @@ namespace x_listing1
             var password = loginPassword.Text;
             var bussiness = bussinessPicker.SelectedItem as string;
 
-            //This will be the check if the password entered is not the main password for the app. this will also give access
-            // to all the application features on the app and nothing will be hidden.
-            if (email == _mainEmail && password == _mainPass)
+            UserModal user = new UserModal();
+            user = cU.GetUser(email);
+            if(user == null)
             {
-                loginEmail.Text = "";
-                loginPassword.Text = "";
-                var mainPg = new MainPage();
-                if(appinit.GetCloudComsList() == null)
-                {
-                    DisplayAlert("Cloud Clients", "It's a null", "OK");
-                }
-                mainPg.SetCloudClients(appinit.GetCloudClientList(), appinit, appinit.GetCloudComsList());
-                Navigation.PushAsync(mainPg);
+                //No User has been found
+                DisplayAlert("Error", "No user found", "OK");
+                return;
             }
+
+            if (user.userPassword == password)
+            {
+                if (user.userBussiness == bussiness)
+                {
+                    loginEmail.Text = "";
+                    loginPassword.Text = "";
+                    var mainPg = new MainPage(user);
+                    if (appinit.GetCloudComsList() == null)
+                    {
+                        DisplayAlert("Cloud Clients", "It's a null", "OK");
+                        return;
+                    }
+                    mainPg.SetCloudClients(appinit.GetCloudClientList(), appinit, appinit.GetCloudComsList());
+                    mainPg.SetProfileForLoggedInUser();
+                    Navigation.PushAsync(mainPg);
+                }
+                else
+                {
+                    DisplayAlert("Invalid", "Invalid Bussiness Entered", "OK");
+                }
+            }
+            else
+            {
+                DisplayAlert("Invalid", "Invalid Password Entered", "OK");
+            }
+
+
 
             // login btn. check if the email and password is corresponding to that which is saved on the cloud 
             // if not then go to the create new account page.

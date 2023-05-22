@@ -13,6 +13,7 @@ namespace x_listing1
         Login lg;
         CloudClientList cloudclist;
         CloudClientComments cloudcComms;
+        CloudUsers clouduser;
         
         //The Initializing of the app class and the app starts here
         public App()
@@ -21,6 +22,7 @@ namespace x_listing1
             //Creates the login page then Pushes the login Page to the Main Navigation page and then links the app class 
             //To the login page
 
+            clouduser = new CloudUsers();
             lg = new Login();
             MainPage = new NavigationPage(lg);
             SetLoginAppLink();
@@ -36,6 +38,7 @@ namespace x_listing1
             cloudclist.GetComments(cloudcComms);
         }
 
+        public CloudUsers GetCloudUsersLink() { return clouduser; }
         //Get the cloud client list from the app.cs class
         public CloudClientList GetCloudClientList() { return cloudclist; }
 

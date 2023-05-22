@@ -11,7 +11,7 @@
             android:TabbedPage.ToolbarPlacement="Bottom">
 
     <local:ClientSearch Title="Search" IconImageSource="starFillV" x:Name="Searche"/>
-    <local:MyProfile Title="Profile" IconImageSource="starFillV"/>
-    <local:Settings Title="Settings" IconImageSource="starEmptyV"/>
+    <local:MyProfile Title="Profile" IconImageSource="starFillV" x:Name="ProfileM"/>
+    <local:Settings Title="Settings" IconImageSource="starEmptyV" x:Name="SettingsM"/>
 
 </TabbedPage>

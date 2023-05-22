@@ -6,10 +6,10 @@ namespace x_listing1.Modals
 {
     public class CommentModal
     {
-        public string commentClientName;
-        public string commenterUsrName;
-        public string commenterUsrImg;
-        public string commenterUsrComment;
-        public int commenterUsrRating;
+        public string commentClientName { get; set; }
+        public string commenterUsrName { get; set; }
+        public string commenterUsrImg { get; set; }
+        public string commenterUsrComment { get; set; }
+        public int commenterUsrRating { get; set; }
     }
 }
