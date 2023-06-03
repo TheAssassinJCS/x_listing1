@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.Views.Settings.SecurityPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#5C469C"
+             Title="Security page">
+    <StackLayout Margin="0,0,0,10">
+        <Label Text="SECURITY"
+               HorizontalOptions="Center"
+               FontSize="40"
+               TextColor="White"
+               FontAttributes="Bold"
+               Margin="0,10,0,0"/>
+        <BoxView HeightRequest=".5" BackgroundColor="WhiteSmoke" Opacity=".5"/>
+
+        <ScrollView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".1*"/>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width=".3*"/>
+                    <ColumnDefinition Width=".1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Acc Name:" Grid.Row="0" Grid.Column="1"
+                       TextColor="White" 
+                       FontSize="Medium"
+                       VerticalOptions="Center"
+                       />
+                <Entry Placeholder="account name link" Grid.Row="0" Grid.Column="2"
+                       PlaceholderColor="WhiteSmoke"
+                       TextColor="White"
+                       BackgroundColor="Transparent"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       Opacity=".70"
+                       x:Name="accUserName"
+                   />
+                <Label Text="Acc Surname:"  Grid.Row="1" Grid.Column="1"
+                       TextColor="White" 
+                       FontSize="Medium"
+                       VerticalOptions="Center"
+                       />
+                <Entry Placeholder="account surname link" Grid.Row="1" Grid.Column="2"
+                       PlaceholderColor="WhiteSmoke"
+                       TextColor="White"
+                       BackgroundColor="Transparent"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       Opacity=".70"
+                       x:Name="accUserSurname"/>
+                <Label Text="Acc Email:" Grid.Row="2" Grid.Column="1"
+                       TextColor="White" 
+                       FontSize="Medium"
+                       VerticalOptions="Center"
+                       />
+                <Entry Placeholder="account email link" Grid.Row="2" Grid.Column="2"
+                       PlaceholderColor="WhiteSmoke"
+                       TextColor="White"
+                       BackgroundColor="Transparent"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       Opacity=".70"
+                       x:Name="accUserEmail"/>
+                <Label Text="Acc Address:" Grid.Row="3" Grid.Column="1"
+                       TextColor="White" 
+                       FontSize="Medium"
+                       VerticalOptions="Center"
+                       />
+                <Entry Placeholder="account address link" Grid.Row="3" Grid.Column="2"
+                       PlaceholderColor="WhiteSmoke"
+                       TextColor="White"
+                       BackgroundColor="Transparent"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       Opacity=".70"
+                       x:Name="accUserAddress"/>
+                <Label Text="Password:" Grid.Row="4" Grid.Column="1"
+                       TextColor="White" 
+                       FontSize="Medium"
+                       VerticalOptions="Center"
+                       />
+                <Entry Placeholder="******************" Grid.Row="4" Grid.Column="2"
+                       PlaceholderColor="WhiteSmoke"
+                       TextColor="White"
+                       BackgroundColor="Transparent"
+                       IsPassword="True"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"
+                       Opacity=".70"
+                       x:Name="accUserPassword"
+                       MaxLength="30"/>
+
+                <Label Text="Bussiness:"  Grid.Row="5" Grid.Column="1"
+                       TextColor="White" 
+                       FontSize="Medium"
+                       VerticalOptions="Center"
+                       />
+                <Picker Title="Bussiness" Grid.Row="5" Grid.Column="2"
+                        TitleColor="#F1F6F9"
+                        Margin="0,5,0,30"
+                        x:Name="bussinessPicker"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        TextColor="White"
+                        SelectedIndex="1">
+                    <Picker.Items>
+                        <x:String>BHR</x:String>
+                        <x:String>BBR</x:String>
+                        <x:String>BRY</x:String>
+                    </Picker.Items>
+                </Picker>
+
+            </Grid>
+        </ScrollView>
+        
+        <Button Text="Save Changes"
+                TextColor="White"
+                BackgroundColor="DarkViolet"
+                CornerRadius="50"
+                x:Name="secSaveBtn"
+                Clicked="SecSaveBtn_Clicked"
+                />
+        <Button Text="Delete Account"
+                TextColor="White"
+                BackgroundColor="DarkViolet"
+                CornerRadius="50"
+                IsVisible="True"
+                x:Name="secDelBtn"
+                Clicked="SecDelBtn_Clicked"
+                />
+        <Button Text="Cancel/Back"
+                TextColor="White"
+                BackgroundColor="DarkViolet"
+                CornerRadius="50"
+                x:Name="secCancelBtn"
+                Clicked="SecCancelBtn_Clicked"
+                />
+    </StackLayout>
+</ContentPage>

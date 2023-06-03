@@ -52,7 +52,7 @@ namespace x_listing1
 
             UserModal user = new UserModal();
             user = cU.GetUser(email);
-            if(user == null)
+            if (user == null)
             {
                 //No User has been found
                 DisplayAlert("Error", "No user found", "OK");

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.Views.Settings.NotificationsPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="DarkViolet"
+             Title="Notifications">
+
+    <StackLayout>
+        <Label Text="Notifications"
+               HorizontalOptions="Center"
+               FontSize="40"
+               TextColor="White"
+               FontAttributes="Bold"
+               Margin="0,10,0,0"/>
+        <BoxView HeightRequest=".5" BackgroundColor="WhiteSmoke" Opacity=".5"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".1*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width=".1*"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1" Margin="0,10,0,0">
+                <Label Text="All Sounds" 
+                       TextColor="White" 
+                       FontSize="Large"
+                       VerticalOptions="Center"
+                       />
+                <Switch IsToggled="False" 
+                        BackgroundColor="Transparent" 
+                        ThumbColor="Blue" 
+                        HorizontalOptions="EndAndExpand" 
+                        OnColor="LightBlue"
+                        x:Name="notificationAllSoundsSwitch"
+                        Toggled="NotificationAllSoundsSwitch_Toggled"
+                        />
+            </StackLayout>
+            
+            <StackLayout Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Margin="0,10,0,0">
+                <Label Text="New Client Added" 
+                       TextColor="White" 
+                       FontSize="Medium"
+                       VerticalOptions="Center"
+                       />
+                <Switch IsToggled="False" 
+                        BackgroundColor="Transparent" 
+                        ThumbColor="Blue" 
+                        HorizontalOptions="EndAndExpand" 
+                        OnColor="LightBlue"
+                        x:Name="notificationNewClientSwitch"
+                        />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Margin="0,10,0,0">
+                <Label Text="New Comment Added" 
+                       TextColor="White" 
+                       FontSize="Medium"
+                       VerticalOptions="Center"
+                       />
+                <Switch IsToggled="False" 
+                        BackgroundColor="Transparent" 
+                        ThumbColor="Blue" 
+                        HorizontalOptions="EndAndExpand" 
+                        OnColor="LightBlue"
+                        x:Name="notificationNewCommentSwitch"
+                        />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.Column="1" Margin="0,10,0,0">
+                <Label Text="User Logged In" 
+                       TextColor="White" 
+                       FontSize="Medium"
+                       VerticalOptions="Center"
+                       />
+                <Switch IsToggled="False" 
+                        BackgroundColor="Transparent" 
+                        ThumbColor="Blue" 
+                        HorizontalOptions="EndAndExpand" 
+                        OnColor="LightBlue"
+                        x:Name="notificationLoginSwitch"
+                        />
+            </StackLayout>
+
+        </Grid>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Margin="0,0,0,50">
+            <Button Text="Cancel"
+                    TextColor="White"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    BackgroundColor="#1D267D"
+                    CornerRadius="20"
+                    FontSize="Medium"
+                    x:Name="notificationCancelBtn"
+                    Clicked="NotificationCancelBtn_Clicked"
+                    />
+            <Button Text="Save"
+                    TextColor="White"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    BackgroundColor="#1D267D"
+                    CornerRadius="20"
+                    FontSize="Large"
+                    x:Name="notificationSaveBtn"
+                    Clicked="NotificationSaveBtn_Clicked"
+                    />
+        </StackLayout>
+        
+    </StackLayout>
+    
+    
+</ContentPage>

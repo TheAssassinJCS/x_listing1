@@ -45,7 +45,7 @@ namespace x_listing1
         {
             Searche.SetUserDetails(usr);
             ProfileM.SetProfDetails(usr);
-            SettingsM.SetUserProfDetails(usr);
+            SettingsM.SetUserProfDetails(usr, appInit.GetCloudUsersLink(), appInit, this);
         }
         
     }

@@ -18,7 +18,8 @@ namespace x_listing1
         ObservableCollection<ClientInfoModal> clientInfoList;
         CloudClientComments cloudComs;
         ClientModal c;
-        public ClientInfo(ClientModal cl, CloudClientComments clCom)
+        UserModal uM;
+        public ClientInfo(ClientModal cl, CloudClientComments clCom, UserModal u)
         {
             InitializeComponent();
             clientInfoName.Text = cl.clientName;
@@ -30,6 +31,7 @@ namespace x_listing1
             clientInfoUserCommentsListView.ItemsSource = clientInfoList;
             cloudComs = clCom;
             c = cl;
+            uM = u;
         }
 
         public ObservableCollection<ClientInfoModal> SetComments(ObservableCollection<CommentModal> commentList)
@@ -62,6 +64,8 @@ namespace x_listing1
             clientInfoList = SetComments(cloudComs.GetCommentList(c.clientName));
             clientInfoUserCommentsListView.ItemsSource = clientInfoList;
         }
+
+        public UserModal GetUserModal() { return uM; }
         private void clientInfoUserCommentsListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if(e.Item == null) { return; }

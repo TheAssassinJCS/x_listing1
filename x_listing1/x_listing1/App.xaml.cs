@@ -36,8 +36,12 @@ namespace x_listing1
 
             //Links the app class to the pages that was created.
             cloudclist.GetComments(cloudcComms);
+
+            // Change the apps colors.
+
         }
 
+        public Login GetLoginPage() { return lg; }
         public CloudUsers GetCloudUsersLink() { return clouduser; }
         //Get the cloud client list from the app.cs class
         public CloudClientList GetCloudClientList() { return cloudclist; }

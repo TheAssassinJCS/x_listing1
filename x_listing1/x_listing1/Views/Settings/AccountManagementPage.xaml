@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.Views.Settings.AccountManagementPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#0C134F"
+             Title="Acc Management">
+
+
+    <StackLayout>
+        <Label Text="Account Management"
+               HorizontalOptions="Center"
+               FontSize="Title"
+               TextColor="White"
+               FontAttributes="Bold"
+               Margin="0,10,0,0"/>
+        <BoxView HeightRequest=".5" BackgroundColor="WhiteSmoke" Opacity=".5"/>
+
+        <ScrollView Margin="0,10,0,10">
+            <ListView x:Name="userAccountsList" ItemTapped="UserAccountsList_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="profimg"
+                                   Height="10"
+                                   Text="{Binding userFullNames}"
+                                   TextColor="WhiteSmoke"
+                                   DetailColor="White"
+                                   />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+        <Button Text="Cancel"
+                TextColor="White"
+                BackgroundColor="DarkViolet"
+                Margin="5,0,5,5"
+                x:Name="accManagementCancelBtn"
+                Clicked="AccManagementCancelBtn_Clicked"
+                />
+
+    </StackLayout>
+
+</ContentPage>

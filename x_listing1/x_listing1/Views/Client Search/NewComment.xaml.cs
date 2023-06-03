@@ -29,8 +29,8 @@ namespace x_listing1
             CommentModal cModal = new CommentModal
             {
                 commentClientName = newCommentClientName.Text,
-                commenterUsrName = "LoggedInUser",
-                commenterUsrImg = "profimg",
+                commenterUsrName = clInfo.GetUserModal().userName,
+                commenterUsrImg = clInfo.GetUserModal().userImage,
                 commenterUsrComment = addCommentsComment.Text,
                 commenterUsrRating = newCommentRatingBar.SelectedStarValue
             };

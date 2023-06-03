@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="x_listing1.Views.Settings.HelpPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#5C469C"
+             Title="Help Page">
+
+    <StackLayout>
+        <Label Text="HELP"
+               HorizontalOptions="Center"
+               FontSize="40"
+               TextColor="White"
+               FontAttributes="Bold"
+               Margin="0,10,0,0"/>
+        <BoxView HeightRequest=".5" BackgroundColor="WhiteSmoke" Opacity=".5"/>
+
+        <ScrollView>
+            <StackLayout>
+                <Button Text="This app is for businesses and workers to rate the clients that they serve and to list the clients for other businesses to look up clients and how they were rated."
+                TextColor="White"
+                FontSize="Small"
+                InputTransparent="True"
+                BackgroundColor="#5C475C"
+                CornerRadius="50"
+                Margin="0,0,0,10"
+                />
+                <Button Text="How Does it work?"
+                    TextColor="White"
+                    FontSize="Medium"
+                    InputTransparent="True"
+                    BackgroundColor="#5C475D"
+                    CornerRadius="50"
+                    Margin="0,0,0,10"/>
+                <Button Text="In the client search page you can either add a new client search for a new client through the search bar or just tap on an existing user and see all comments for that spesific client."
+                    TextColor="White"
+                    FontSize="Small"
+                    InputTransparent="True"
+                    BackgroundColor="#5C475C"
+                    CornerRadius="50"
+                    Margin="0,0,0,10"/>
+                <Button Text="Adding new comments:"
+                    TextColor="White"
+                    FontSize="Medium"
+                    InputTransparent="True"
+                    BackgroundColor="#5C475D"
+                    CornerRadius="50"
+                    Margin="0,0,0,10"/>
+                <Button Text="Tap on a client in the search and click on add comments. Then add a comment in the entry bar and set a rating , this will affect the clients overall rating. Then use the create comment button , You will have to be connected to the internet as the comments are uploaded to the net for everyone to see."
+                    TextColor="White"
+                    FontSize="Small"
+                    InputTransparent="True"
+                    BackgroundColor="#5C475C"
+                    CornerRadius="50"
+                    Margin="0,0,0,10"/>
+                <Button Text="How to Reset the password:"
+                    TextColor="White"
+                    FontSize="Medium"
+                    InputTransparent="True"
+                    BackgroundColor="#5C475D"
+                    CornerRadius="50"
+                    Margin="0,0,0,10"/>
+                <Button Text="In the settings tab go to security and type the new password in the password opening and change it , the same can be done with the email and name and the bussiness you are working for. Just change the item that you want to change you dont have to fill in the rest."
+                    TextColor="White"
+                    FontSize="Small"
+                    InputTransparent="True"
+                    BackgroundColor="#5C475C"
+                    CornerRadius="50"
+                    Margin="0,0,0,10"/>
+            </StackLayout>
+        </ScrollView>
+
+        <Button Text="Cancel"
+                TextColor="White"
+                VerticalOptions="EndAndExpand"
+                CornerRadius="100"
+                BackgroundColor="DarkViolet"
+                Margin="5,0,5,10"
+                x:Name="helpPageCancelBtn"
+                Clicked="HelpPageCancelBtn_Clicked"
+                />
+    </StackLayout>
+
+</ContentPage>

@@ -14,12 +14,5 @@ namespace x_listing1.Modals
         public int clientCellNo { get; set; }
         public int clientAdjustedRating { get; set; }
         public ObservableCollection<CommentModal> comments { get; set; }
-        //public string topComment
-        //{
-        //    get
-        //    {
-        //        return comments[0].commenterUsrComment;
-        //    }
-        //}
     }
 }

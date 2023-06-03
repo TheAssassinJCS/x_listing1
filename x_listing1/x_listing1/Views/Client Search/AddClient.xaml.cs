@@ -18,14 +18,16 @@ namespace x_listing1
         CloudClientList cl;
         CloudClientComments coms;
         ClientSearch clientSearchPage;
+        UserModal uM;
 
         //This is where the page is created, done from the app.cs class
-        public AddClient(CloudClientComments cm, CloudClientList c, ClientSearch cs)
+        public AddClient(CloudClientComments cm, CloudClientList c, ClientSearch cs, UserModal u)
         {
             InitializeComponent();
             coms = cm;
             cl = c;
             clientSearchPage = cs;
+            uM = u;
         }
 
         //This fires when the cancel button is clicked
@@ -71,8 +73,8 @@ namespace x_listing1
             CommentModal commsModal = new CommentModal
             {
                 commentClientName = cName,
-                commenterUsrName = "LoggedInUser",
-                commenterUsrImg = "profimg",
+                commenterUsrName = uM.userName,
+                commenterUsrImg = uM.userImage,
                 commenterUsrComment = addClientComment.Text,
                 commenterUsrRating = addClientRating.SelectedStarValue
             };

@@ -23,60 +23,19 @@
         </StackLayout>
 
         <StackLayout Grid.Row="1">
-            <Grid Margin="0,10,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width=".35*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Image Source="profimg" 
-                       HeightRequest="100" 
-                       WidthRequest="100" 
-                       Grid.Row="0" 
-                       Grid.Column="0"
-                       x:Name="settingsProfImg"/>
-                <StackLayout Grid.Column="1"
-                             Grid.Row="0">
-                    <Label Text="Steven Castillo" 
-                       TextColor="WhiteSmoke" 
-                       FontSize="Large"  
-                       Grid.Column="1"
-                       Grid.Row="0" 
-                       Margin="15,0,0,0"
-                       VerticalOptions="Center" 
-                       HorizontalOptions="Start"
-                       x:Name="settingsProfName"/>
-                    <Label Text="Steven.Castillo1@gmail.com" 
-                       TextColor="WhiteSmoke" 
-                       FontSize="Medium"  
-                       Grid.Column="1"
-                       Grid.Row="0" 
-                       Opacity="0.15"
-                       Margin="15,0,0,0"
-                       VerticalOptions="Center" 
-                       HorizontalOptions="Start"
-                       x:Name="settingsProfEmail"/>
-                </StackLayout> 
-            </Grid>
-
 
             <StackLayout Orientation="Horizontal" Margin="0,15,0,0">
                 <Image Source="general"
                        HeightRequest="35"
                        WidthRequest="35"
                        BackgroundColor="Transparent"/>
-                
+
                 <Label Text="GENERAL" 
                        TextColor="White" 
                        FontSize="25" 
                        Margin="10,0,0,0"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"/>
-
-                <Button Text=">"
-                        TextColor="White"
-                        BackgroundColor="Transparent"
-                        FontSize="Large"
-                        HorizontalOptions="EndAndExpand"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
@@ -96,7 +55,9 @@
                         TextColor="White"
                         BackgroundColor="Transparent"
                         FontSize="Large"
-                        HorizontalOptions="EndAndExpand"/>
+                        HorizontalOptions="EndAndExpand"
+                        x:Name="notificationsPageBtn"
+                        Clicked="NotificationsPageBtn_Clicked"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
@@ -117,7 +78,52 @@
                         BackgroundColor="Transparent" 
                         HorizontalOptions="EndAndExpand" 
                         Margin="0,0,15,0"
-                        />
+                        x:Name="themeSwitch"
+                        Toggled="ThemeSwitch_Toggled"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,0">
+                <Image Source=""
+                       HeightRequest="35"
+                       WidthRequest="35"
+                       BackgroundColor="Transparent"/>
+                <Label Text="Security" 
+                       TextColor="White" 
+                       FontSize="25" 
+                       Margin="20,0,0,0"
+                       Opacity=".8"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+
+                <Button Text=">"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        FontSize="Large"
+                        HorizontalOptions="EndAndExpand"
+                        x:Name="secPageBtn"
+                        Clicked="SecPageBtn_Clicked"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,0" IsVisible="True" x:Name="adminOnlyAccess">
+                <Image Source=""
+                       HeightRequest="35"
+                       WidthRequest="35"
+                       BackgroundColor="Transparent"/>
+                <Label Text="Account Management" 
+                       TextColor="White" 
+                       FontSize="25" 
+                       Margin="20,0,0,0"
+                       Opacity=".8"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+
+                <Button Text=">"
+                        TextColor="White"
+                        BackgroundColor="Transparent"
+                        FontSize="Large"
+                        HorizontalOptions="EndAndExpand"
+                        x:Name="accManagement"
+                        Clicked="AccManagement_Clicked"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" Margin="0,5,0,0">
@@ -131,12 +137,28 @@
                        Margin="10,0,0,0"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,5">
+                <Image Source=""
+                       HeightRequest="35"
+                       WidthRequest="35"
+                       BackgroundColor="Transparent"/> 
+                <Label Text="Info Page" 
+                       TextColor="White" 
+                       FontSize="25" 
+                       Margin="20,0,0,0"
+                       Opacity=".8"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
 
                 <Button Text=">"
                         TextColor="White"
                         BackgroundColor="Transparent"
                         FontSize="Large"
-                        HorizontalOptions="EndAndExpand"/>
+                        HorizontalOptions="EndAndExpand"
+                        x:Name="helpPageBtn"
+                        Clicked="HelpPageBtn_Clicked"/>
             </StackLayout>
 
             <Button Text="LOG OUT" 

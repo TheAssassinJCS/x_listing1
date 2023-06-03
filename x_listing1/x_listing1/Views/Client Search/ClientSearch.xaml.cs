@@ -86,7 +86,7 @@ namespace x_listing1
         private void btnClientSearchAddClient_Clicked(object sender, EventArgs e)
         {
             //Sends to the add client Page
-            Navigation.PushAsync(new AddClient(cComs, c, this));
+            Navigation.PushAsync(new AddClient(cComs, c, this, usrM));
         }
 
         //This Fires when one of the clients has been tapped . It opens the Client Info page for a spesific client and then adds all of the 
@@ -97,7 +97,7 @@ namespace x_listing1
             ClientModal client = e.Item as ClientModal;
             if (client != null)
             {
-                Navigation.PushAsync(new ClientInfo(client, cComs));
+                Navigation.PushAsync(new ClientInfo(client, cComs, usrM));
             }
             else
             {
