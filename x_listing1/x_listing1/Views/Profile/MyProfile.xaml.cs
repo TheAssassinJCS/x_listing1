@@ -28,8 +28,13 @@ namespace x_listing1
             profileCellNo.Text = u.userCellNumber.ToString();
             if(u.userBussiness == "BHR")
             {
-                profileBussiness.Text = "Bethlehem Hydro Rubber (BHR)";
+                profileBussiness.Text = "BHR - Example Company";
             }
+        }
+
+        public void SetBackgroundColor(Color clr)
+        {
+            BackgroundColor = clr;
         }
     }
 }

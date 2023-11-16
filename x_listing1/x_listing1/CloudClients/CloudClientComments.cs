@@ -13,19 +13,19 @@ namespace x_listing1.CloudClients
         ObservableCollection<CommentModal> comments = new ObservableCollection<CommentModal>
         {
             new CommentModal{commentClientName="John Taljaard", commenterUsrName="Jan Raap", commenterUsrImg="profimg",
-                commenterUsrRating=5, commenterUsrComment="He is a dick"},
+                commenterUsrRating=5, commenterUsrComment="This is a test user"},
             new CommentModal{commentClientName="Alba Brink", commenterUsrName="Jan Raap", commenterUsrImg="profimg",
-                commenterUsrRating=4, commenterUsrComment="She is nice"},
+                commenterUsrRating=4, commenterUsrComment="This ia also a test user"},
             new CommentModal{commentClientName="Donald Van der westhuizen", commenterUsrName="Jan Raap", commenterUsrImg="profimg",
                 commenterUsrRating=1, commenterUsrComment="This guy does'nt want to pay anyone"},
             new CommentModal{commentClientName="1234567890 12345", commenterUsrName="Jan Raap", commenterUsrImg="profimg",
                 commenterUsrRating=4, commenterUsrComment="This is a test"},
             new CommentModal{commentClientName="John Taljaard", commenterUsrName="Mr A", commenterUsrImg="profimg",
-                commenterUsrRating=2, commenterUsrComment="Sometimes this guy knows nothing"},
+                commenterUsrRating=2, commenterUsrComment="Another Test User"},
             new CommentModal{commentClientName="Alba Brink", commenterUsrName="Mrs K", commenterUsrImg="profimg",
-                commenterUsrRating=3, commenterUsrComment="She always pays."},
+                commenterUsrRating=3, commenterUsrComment="Test."},
             new CommentModal{commentClientName="Alba Brink", commenterUsrName="Mrs L", commenterUsrImg="profimg",
-                commenterUsrRating=4, commenterUsrComment="Damn What the hell."}
+                commenterUsrRating=4, commenterUsrComment="Test User."}
         };
 
 
@@ -46,7 +46,7 @@ namespace x_listing1.CloudClients
             }
             else
             {
-                Debug.WriteLine("AN ERROR OCCURRED >> PLEASE CHECK WHY DID THE APP NOT GET ANY COMMENTS AT ALL FOR SOME OF THE CLIENTS   ............................THIS IS NEVER SUPPOSED TO SHOW HERE...................................................................................................................................................................................");
+                Debug.WriteLine("An Error Occured - This was not supposed to show");
                 return null;
             }
         }

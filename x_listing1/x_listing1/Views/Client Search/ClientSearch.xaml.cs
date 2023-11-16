@@ -105,5 +105,10 @@ namespace x_listing1
             }
         }
 
+        public void SetBackgroundColor(Color clr)
+        {
+            BackgroundColor = clr;
+        }
+
     }
 }

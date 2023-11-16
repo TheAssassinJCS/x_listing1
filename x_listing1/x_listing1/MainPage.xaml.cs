@@ -47,6 +47,15 @@ namespace x_listing1
             ProfileM.SetProfDetails(usr);
             SettingsM.SetUserProfDetails(usr, appInit.GetCloudUsersLink(), appInit, this);
         }
-        
+
+        public void setProfileColor(Color clr)
+        {
+            ProfileM.SetBackgroundColor(clr);
+        }
+
+        public void setSearchColor(Color clr)
+        {
+            Searche.SetBackgroundColor(clr);
+        }
     }
 }

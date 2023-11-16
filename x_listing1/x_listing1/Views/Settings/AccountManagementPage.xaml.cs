@@ -19,8 +19,18 @@ namespace x_listing1.Views.Settings
 			InitializeComponent ();
 			users = new ObservableCollection<UserModal>
 			{
-				new UserModal { uid=0, userName="Jake", userSurname="Simmons", userEmail="jake@gmail.com", userAddress="Bethlehem",
-							userImage="profimg", userCellNumber=0123456789, userPassword="1234", userBussiness="BHR", isAdmin=false}
+				new UserModal { 
+					uid=0, 
+					userName="Jake", 
+					userSurname="Simmons", 
+					userEmail="jake@gmail.com", 
+					userAddress="Bethlehem",
+					userImage="profimg", 
+					userCellNumber=0123456789, 
+					userPassword="1234", 
+					userBussiness="BHR", 
+					isAdmin=false
+				}
 			};
 			userAccountsList.ItemsSource = users;
 		}

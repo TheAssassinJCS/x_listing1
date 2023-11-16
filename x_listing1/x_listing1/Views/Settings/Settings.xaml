@@ -168,7 +168,9 @@
                     BackgroundColor="red" 
                     Opacity=".60"
                     CornerRadius="50"
-                    Margin="0,0,0,25"/>
+                    Margin="0,0,0,25"
+                    x:Name="Logout_Btn"
+                    Clicked="Logout_BtnClicked"/>
 
         </StackLayout>
 

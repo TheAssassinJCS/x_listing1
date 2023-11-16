@@ -88,7 +88,7 @@ namespace x_listing1
 
 
             // login btn. check if the email and password is corresponding to that which is saved on the cloud 
-            // if not then go to the create new account page.
+            // if not then go to the create new account page. -- This is for adding it to an actual online Server
             // NOTE :: HAVE TO ADD :: when email does not correspond to any saved emails then an error has to be given to the user 
             //saying that an incorrect email or password has been given or that the email or password or bussiness cannot be empty
         }
