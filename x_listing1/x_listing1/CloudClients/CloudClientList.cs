@@ -11,6 +11,7 @@ namespace x_listing1.CloudClients
 {
     public class CloudClientList
     {
+        //Create Temp Client Modals
         ObservableCollection<ClientModal> clients = new ObservableCollection<ClientModal>
             {
                 new ClientModal

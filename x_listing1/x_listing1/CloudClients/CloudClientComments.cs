@@ -10,6 +10,7 @@ namespace x_listing1.CloudClients
 {
     public class CloudClientComments
     {
+        // Create Temporary Client Comments
         ObservableCollection<CommentModal> comments = new ObservableCollection<CommentModal>
         {
             new CommentModal{commentClientName="John Taljaard", commenterUsrName="Jan Raap", commenterUsrImg="profimg",

@@ -6,6 +6,7 @@ using x_listing1.Modals;
 
 namespace x_listing1.Modals
 {
+    //Like a instance or constructor of a client
     public class ClientModal
     {
         public string clientName { get; set; }

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace x_listing1.Modals
 {
+    //Instance or constructor of a comment
     public class CommentModal
     {
         public string commentClientName { get; set; }

@@ -4,6 +4,7 @@ using System.Text;
 
 namespace x_listing1.Modals
 {
+    //Constructor of the user
     public class UserModal
     {
         public int uid { get; set; }

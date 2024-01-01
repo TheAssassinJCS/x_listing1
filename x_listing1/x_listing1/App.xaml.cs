@@ -37,8 +37,6 @@ namespace x_listing1
             //Links the app class to the pages that was created.
             cloudclist.GetComments(cloudcComms);
 
-            // Change the apps colors.
-
         }
 
         public Login GetLoginPage() { return lg; }

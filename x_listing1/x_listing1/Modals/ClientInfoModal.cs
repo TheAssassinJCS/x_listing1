@@ -4,6 +4,7 @@ using System.Text;
 
 namespace x_listing1.Modals
 {
+    //Like a instance of a client info modal.
     public class ClientInfoModal
     {
         public string commenteruserImage {  get; set; }
